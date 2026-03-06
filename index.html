@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOGCLUB - DayCare & Hotel Canino</title>
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Aplicar tema antes do carregamento para evitar flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16805769504"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-16805769504');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Botão Toggle de Tema - Fora do header para sempre estar visível -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <span class="theme-toggle-track">
+            <i class="fas fa-sun theme-icon-sun"></i>
+            <i class="fas fa-moon theme-icon-moon"></i>
+            <span class="theme-toggle-thumb"></span>
+        </span>
+    </button>
+
+    <!-- Navigation -->
+    <header class="main-header" id="mainHeader">
+        <div class="container navbar">
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu" id="hamburger">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <video id="hero-video" autoplay loop muted playsinline>
+                <source src="https://res.cloudinary.com/dobo2yvgz/video/upload/v1769439801/0125_1_tqtbw3.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <img src="logo.webp" alt="DOGCLUB" class="hero-logo">
+                <a href="https://wa.me/5534996742091" target="_blank" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Fale Conosco
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção de Boas-Vindas -->
+        <section class="welcome-section" id="sobre">
+            <div class="container">
+                <div class="welcome-layout">
+                    <div class="welcome-content">
+                        <h2 class="section-title" style="text-align: left;">O Lugar Perfeito Para o Seu Aumigo</h2>
+                        <p>Na DOGCLUB, acreditamos que cada pet merece cuidado, atenção e muito carinho. Somos mais que um DayCare e Hotel Canino - somos uma família dedicada ao bem-estar e felicidade do seu melhor amigo.</p>
+                        <p>Nossas instalações foram pensadas para proporcionar diversão, socialização e recreação canina em um ambiente seguro e acolhedor. Cada brincadeira, cada passeio, cada momento é planejado com amor e profissionalismo.</p>
+                    </div>
+                    <div class="welcome-image-wrapper">
+                        <img src="lugar.webp" alt="Cães brincando no DOGCLUB">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Serviços -->
+        <section class="services-section" id="servicos">
+            <div class="container">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Cuidado completo e profissional para o seu melhor amigo</p>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="dog1.webp" alt="DayCare & Hotel" class="service-img">
+                        </div>
+                        <h3>DayCare & Hotel</h3>
+                        <p>Diversão, socialização e recreação canina em ambiente seguro e acolhedor. Seu pet terá toda atenção e carinho que merece!</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="dog2.webp" alt="Pet Sitter" class="service-img">
+                        </div>
+                        <h3>Pet Sitter</h3>
+                        <p>Cuidado personalizado no conforto da sua casa. Seu aumiguinho fica em casa enquanto você viaja com total tranquilidade.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="dog3.webp" alt="Dog Walker" class="service-img">
+                        </div>
+                        <h3>Dog Walker</h3>
+                        <p>Passeios regulares para manter seu cão ativo, saudável e feliz. Exercício diário com profissionais experientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Depoimentos -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+                <p class="section-subtitle">A felicidade dos pets e a confiança dos tutores são nossa maior recompensa</p>
+            </div>
+            <div class="testimonial-slider-wrapper">
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <!-- Gerado via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Galeria de Fotos -->
+        <section class="gallery-section" id="galeria">
+            <div class="container">
+                <h2 class="section-title">Nossa Galeria</h2>
+                <p class="section-subtitle">Veja momentos especiais dos nossos aumiguinhos</p>
+            </div>
+            <div class="gallery-wrapper">
+                <div class="gallery-container">
+                    <div class="gallery-track" id="galleryTrack">
+                        <div class="gallery-item"><img src="1.webp" alt="Galeria 1"></div>
+                        <div class="gallery-item"><img src="2.webp" alt="Galeria 2"></div>
+                        <div class="gallery-item"><img src="3.webp" alt="Galeria 3"></div>
+                        <div class="gallery-item"><img src="4.webp" alt="Galeria 4"></div>
+                        <div class="gallery-item"><img src="5.webp" alt="Galeria 5"></div>
+                        <div class="gallery-item"><img src="6.webp" alt="Galeria 6"></div>
+                        <div class="gallery-item"><img src="7.webp" alt="Galeria 7"></div>
+                        <div class="gallery-item"><img src="8.webp" alt="Galeria 8"></div>
+                        <div class="gallery-item"><img src="9.webp" alt="Galeria 9"></div>
+                        <div class="gallery-item"><img src="10.webp" alt="Galeria 10"></div>
+                        <div class="gallery-item"><img src="11.webp" alt="Galeria 11"></div>
+                        <div class="gallery-item"><img src="12.webp" alt="Galeria 12"></div>
+                        <div class="gallery-item"><img src="13.webp" alt="Galeria 13"></div>
+                        <div class="gallery-item"><img src="14.webp" alt="Galeria 14"></div>
+                        <div class="gallery-item"><img src="15.webp" alt="Galeria 15"></div>
+                        <div class="gallery-item"><img src="16.webp" alt="Galeria 16"></div>
+                        <div class="gallery-item"><img src="17.webp" alt="Galeria 17"></div>
+                        <div class="gallery-item"><img src="18.webp" alt="Galeria 18"></div>
+                        <div class="gallery-item"><img src="19.webp" alt="Galeria 19"></div>
+                        <div class="gallery-item"><img src="20.webp" alt="Galeria 20"></div>
+                        <div class="gallery-item"><img src="21.webp" alt="Galeria 21"></div>
+                        <div class="gallery-item"><img src="22.webp" alt="Galeria 22"></div>
+                        <div class="gallery-item"><img src="23.webp" alt="Galeria 23"></div>
+                        <div class="gallery-item"><img src="24.webp" alt="Galeria 24"></div>
+                        <div class="gallery-item"><img src="25.webp" alt="Galeria 25"></div>
+                        <div class="gallery-item"><img src="26.webp" alt="Galeria 26"></div>
+                    </div>
+                    <button class="gallery-btn gallery-btn-prev" id="galleryBtnPrev" aria-label="Foto anterior">
+                        <img src="patinha.svg" alt="Anterior" class="gallery-btn-icon">
+                    </button>
+                    <button class="gallery-btn gallery-btn-next" id="galleryBtnNext" aria-label="Próxima foto">
+                        <img src="patinha.svg" alt="Próximo" class="gallery-btn-icon">
+                    </button>
+                </div>
+                <div class="gallery-indicators" id="galleryIndicators"></div>
+            </div>
+        </section>
+
+        <!-- Seção CTA Final -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-layout">
+                    <div class="cta-content">
+                        <h2 class="section-title">Garanta Já a Vaga do Seu Aumiguinho!</h2>
+                        <p class="section-subtitle">Entre em contato e descubra como podemos cuidar do seu pet com todo carinho e profissionalismo que ele merece</p>
+                        <a href="https://wa.me/5534996742091" target="_blank" class="btn-subscribe">
+                            <i class="fab fa-whatsapp"></i> Fale Conosco no WhatsApp
+                        </a>
+                    </div>
+                    <div class="cta-image-wrapper"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section class="contact-section" id="contato">
+            <div class="contact-grid">
+                <div class="contact-details-wrapper">
+                    <img src="logo.webp" alt="DOGCLUB Logo" class="contact-logo">
+                    <h3>Entre em Contato</h3>
+                    <p>Estamos sempre disponíveis para tirar dúvidas, agendar uma visita ou simplesmente conversar sobre o cuidado do seu pet.</p>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-phone"></i><a href="https://wa.me/5534996742091">(34) 99674-2091</a></li>
+                        <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/5534996742091">WhatsApp</a></li>
+                        <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/dogclubudia" target="_blank">@dogclubudia</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:dogclubudiapet@gmail.com">dogclubudiapet@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i><span>Avenida Bélgica, 1168<br>Tibery, Uberlândia - MG</span></li>
+                    </ul>
+                </div>
+                <div class="contact-map-wrapper">
+                    <div class="map-container">
+                        <img src="mapa.webp" alt="Localização DOGCLUB" class="map-image">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Bélgica+1168,+Tibery,+Uberlândia+-+MG,+Brasil" target="_blank" class="map-open-button" title="Abrir no Google Maps">
+                            <i class="fas fa-external-link-alt"></i>
+                            Abrir no Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; Copyright DOGCLUB 2026. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
